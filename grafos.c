@@ -13,7 +13,7 @@ Grafo* criar_grafo(int num_cidades) {
 
     g->matriz_adjacencia = (int **)malloc(num_cidades * sizeof(int *));
     for (int i = 0; i < num_cidades; i++) {
-        g->matriz_adjacencia[i] = (int *)calloc(num_cidades, sizeof(int)); // Inicializa com 0
+        g->matriz_adjacencia[i] = (int *)calloc(num_cidades, sizeof(int));
     }
 
     return g;
@@ -22,7 +22,7 @@ Grafo* criar_grafo(int num_cidades) {
 // Função para inserir conexão
 void inserir_conexao(Grafo *g, int origem, int destino) {
     if (origem >= 0 && origem < g->num_cidades && destino >= 0 && destino < g->num_cidades) {
-        g->matriz_adjacencia[origem][destino] = 1; // Marca a conexão
+        g->matriz_adjacencia[origem][destino] = 1;
     } else {
         printf("Cidades invalidas.\n");
     }
